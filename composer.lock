@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "aa322c53454393ed775cfe4807d54a50",
+    "content-hash": "4d0a7c9497462fa9870abc3a87428fed",
     "packages": [
         {
             "name": "brick/math",
@@ -1557,6 +1557,93 @@
             "time": "2022-12-11T20:36:23+00:00"
         },
         {
+            "name": "league/csv",
+            "version": "9.9.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/thephpleague/csv.git",
+                "reference": "b4418ede47fbd88facc34e40a16c8ce9153b961b"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/thephpleague/csv/zipball/b4418ede47fbd88facc34e40a16c8ce9153b961b",
+                "reference": "b4418ede47fbd88facc34e40a16c8ce9153b961b",
+                "shasum": ""
+            },
+            "require": {
+                "ext-json": "*",
+                "ext-mbstring": "*",
+                "php": "^8.1.2"
+            },
+            "require-dev": {
+                "doctrine/collections": "^2.1.2",
+                "ext-dom": "*",
+                "ext-xdebug": "*",
+                "friendsofphp/php-cs-fixer": "^v3.14.3",
+                "phpbench/phpbench": "^1.2.8",
+                "phpstan/phpstan": "^1.10.4",
+                "phpstan/phpstan-deprecation-rules": "^1.1.2",
+                "phpstan/phpstan-phpunit": "^1.3.10",
+                "phpstan/phpstan-strict-rules": "^1.5.0",
+                "phpunit/phpunit": "^10.0.14"
+            },
+            "suggest": {
+                "ext-dom": "Required to use the XMLConverter and the HTMLConverter classes",
+                "ext-iconv": "Needed to ease transcoding CSV using iconv stream filters"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "9.x-dev"
+                }
+            },
+            "autoload": {
+                "files": [
+                    "src/functions_include.php"
+                ],
+                "psr-4": {
+                    "League\\Csv\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Ignace Nyamagana Butera",
+                    "email": "nyamsprod@gmail.com",
+                    "homepage": "https://github.com/nyamsprod/",
+                    "role": "Developer"
+                }
+            ],
+            "description": "CSV data manipulation made easy in PHP",
+            "homepage": "https://csv.thephpleague.com",
+            "keywords": [
+                "convert",
+                "csv",
+                "export",
+                "filter",
+                "import",
+                "read",
+                "transform",
+                "write"
+            ],
+            "support": {
+                "docs": "https://csv.thephpleague.com",
+                "issues": "https://github.com/thephpleague/csv/issues",
+                "rss": "https://github.com/thephpleague/csv/releases.atom",
+                "source": "https://github.com/thephpleague/csv"
+            },
+            "funding": [
+                {
+                    "url": "https://github.com/sponsors/nyamsprod",
+                    "type": "github"
+                }
+            ],
+            "time": "2023-03-11T15:57:12+00:00"
+        },
+        {
             "name": "league/flysystem",
             "version": "3.15.1",
             "source": {
@@ -2111,6 +2198,192 @@
                 "source": "https://github.com/nette/utils/tree/v4.0.0"
             },
             "time": "2023-02-02T10:41:53+00:00"
+        },
+        {
+            "name": "nevadskiy/downloader",
+            "version": "0.4.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/nevadskiy/downloader.git",
+                "reference": "a50c394a1a040cb87a33a854ec4d0b00ba629d17"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/nevadskiy/downloader/zipball/a50c394a1a040cb87a33a854ec4d0b00ba629d17",
+                "reference": "a50c394a1a040cb87a33a854ec4d0b00ba629d17",
+                "shasum": ""
+            },
+            "require": {
+                "ext-curl": "*",
+                "php": "^7.0|^8.0",
+                "psr/log": "^1.0|^2.0|^3.0"
+            },
+            "require-dev": {
+                "friendsofphp/php-cs-fixer": "^2.19",
+                "phpunit/phpunit": "^6.0|^8.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Nevadskiy\\Downloader\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Nevadskiy",
+                    "email": "nevadskiy@gmail.com"
+                }
+            ],
+            "description": "Download files using PHP and Curl",
+            "keywords": [
+                "curl",
+                "download",
+                "downloader",
+                "files"
+            ],
+            "support": {
+                "issues": "https://github.com/nevadskiy/downloader/issues",
+                "source": "https://github.com/nevadskiy/downloader/tree/0.4.0"
+            },
+            "time": "2022-11-27T14:30:40+00:00"
+        },
+        {
+            "name": "nevadskiy/laravel-geonames",
+            "version": "0.5.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/nevadskiy/laravel-geonames.git",
+                "reference": "bbeed6662f1245e17e8235af04aa4e787ebb8570"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/nevadskiy/laravel-geonames/zipball/bbeed6662f1245e17e8235af04aa4e787ebb8570",
+                "reference": "bbeed6662f1245e17e8235af04aa4e787ebb8570",
+                "shasum": ""
+            },
+            "require": {
+                "ext-zip": "*",
+                "laravel/framework": "^8.0|^9.0|^10.0",
+                "league/csv": "^9.7",
+                "nevadskiy/downloader": "0.4.0",
+                "php": "^7.3|^8.0"
+            },
+            "require-dev": {
+                "friendsofphp/php-cs-fixer": "^3.0",
+                "nevadskiy/laravel-translatable": "^0.8",
+                "orchestra/testbench": "^6.0|^7.0|^8.0",
+                "phpunit/phpunit": "^9.0"
+            },
+            "suggest": {
+                "nevadskiy/laravel-translatable": "Required to use geonames translations."
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Nevadskiy\\Geonames\\GeonamesServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Nevadskiy\\Geonames\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Nevadskiy",
+                    "email": "nevadskiy@gmail.com"
+                }
+            ],
+            "description": "Populate your database using the GeoNames service.",
+            "homepage": "https://github.com/nevadskiy/laravel-geonames",
+            "keywords": [
+                "address",
+                "city",
+                "country",
+                "database",
+                "geo",
+                "geonames",
+                "laravel",
+                "location"
+            ],
+            "support": {
+                "issues": "https://github.com/nevadskiy/laravel-geonames/issues",
+                "source": "https://github.com/nevadskiy/laravel-geonames/tree/0.5.0"
+            },
+            "time": "2023-02-24T18:15:47+00:00"
+        },
+        {
+            "name": "nevadskiy/laravel-translatable",
+            "version": "0.8.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/nevadskiy/laravel-translatable.git",
+                "reference": "b6af23506e58f701063094597c4e4d312262f082"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/nevadskiy/laravel-translatable/zipball/b6af23506e58f701063094597c4e4d312262f082",
+                "reference": "b6af23506e58f701063094597c4e4d312262f082",
+                "shasum": ""
+            },
+            "require": {
+                "laravel/framework": "^7.0|^8.0|^9.0|^10.0",
+                "php": "^7.2|^8.0"
+            },
+            "require-dev": {
+                "friendsofphp/php-cs-fixer": "^3.0",
+                "mockery/mockery": "^1.2",
+                "orchestra/testbench": "^5.0|^6.0|^7.0|^8.0",
+                "phpunit/phpunit": "^8.0|^9.0"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Nevadskiy\\Translatable\\TranslatableServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Nevadskiy\\Translatable\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Nevadskiy",
+                    "email": "nevadskiy@gmail.com"
+                }
+            ],
+            "description": "Add translations to your Eloquent models",
+            "homepage": "https://github.com/nevadskiy/laravel-translatable",
+            "keywords": [
+                "database",
+                "laravel",
+                "localization",
+                "model",
+                "translation",
+                "translations"
+            ],
+            "support": {
+                "issues": "https://github.com/nevadskiy/laravel-translatable/issues",
+                "source": "https://github.com/nevadskiy/laravel-translatable/tree/0.8.1"
+            },
+            "time": "2023-02-24T17:44:55+00:00"
         },
         {
             "name": "nikic/php-parser",
