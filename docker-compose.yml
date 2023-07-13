@@ -12,8 +12,8 @@ services:
             - './storage/mysql-data:/var/lib/mysql/' #Save db-data to disc
         environment:
             - MYSQL_ROOT_PASSWORD=Aa123456789
-            - MYSQL_DATABASE=advert-board
-            - MYSQL_USER=advert-board
+            - MYSQL_DATABASE=geo-advert-board
+            - MYSQL_USER=geo-advert-board
             - MYSQL_PASSWORD=Aa123456789
         ports:
             - '7601:3306'
