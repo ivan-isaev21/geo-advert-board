@@ -2,10 +2,12 @@
 
 namespace App\Models\Geo;
 
+use App\Http\Resources\CityIndexSearchResource;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Support\Carbon;
 use Nevadskiy\Geonames\Translations\HasTranslations;
+use Laravel\Scout\Searchable;
 
 /**
  * @property int id
@@ -25,7 +27,7 @@ use Nevadskiy\Geonames\Translations\HasTranslations;
  */
 class City extends Model
 {
-    use HasTranslations;
+    use HasTranslations, Searchable;
 
     /**
      * Attributes that are translatable.
@@ -35,6 +37,39 @@ class City extends Model
     protected $translatable = [
         'name',
     ];
+    
+    /**
+     * Method toSearchableArray
+     *
+     * @return array
+     */
+    public function toSearchableArray():array
+    {
+
+        return [
+            'id' => $this->id,
+            'name' => $this->name,
+            'country_id' => $this->country_id,
+            'division_id' => $this->division_id,
+            '_geo' => [
+                'lat' => $this->latitude,
+                'lng' => $this->longitude
+            ],
+            'timezone_id' => $this->timezone_id,
+            'population' => $this->population,
+            'elevation' => $this->elevation,
+            'dem' => $this->dem,
+            'feature_code' => $this->feature_code,
+            'geoname_id' => $this->geoname_id,
+            'translations' => array_map(function ($item) {
+                return [
+                    'id' => $item['id'],
+                    'name' => $item['name'],
+                    'locale' => $item['locale']
+                ];
+            }, $this->translations->toArray())
+        ];
+    }
 
     /**
      * Get a relationship with a country.
